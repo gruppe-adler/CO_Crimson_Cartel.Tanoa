@@ -8,4 +8,6 @@ class grad_crimsonCartel {
     #include "functions\patrol\cfgFunctions.hpp"
     #include "functions\evac\cfgFunctions.hpp"
     #include "functions\util\cfgFunctions.hpp"
+    #include "functions\captures\cfgFunctions.hpp"
+    #include "functions\hapuru\cfgFunctions.hpp"
 };
