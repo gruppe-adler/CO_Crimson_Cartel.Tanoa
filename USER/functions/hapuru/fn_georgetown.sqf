@@ -18,5 +18,10 @@ _wp setWaypointSpeed "LIMITED";
 
 sleep 12;
 
+sleep 15;
+[] call GRAD_CC_fnc_factory;
+
 waitUntil { isTouchingGround grad_cc_hapuruHeli };
 grad_cc_hapuruHeli engineOn false;
+
+// schedule time

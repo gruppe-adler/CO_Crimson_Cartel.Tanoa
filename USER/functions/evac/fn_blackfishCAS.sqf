@@ -41,7 +41,7 @@ while {alive _veh} do {
 	
 	_gun = selectRandom ["cannon_105mm_VTOL_01", "gatling_20mm_VTOL_01", "autocannon_40mm_VTOL_01", "gatling_20mm_VTOL_01"];
 	private _start = time;
-	private _stop = _start + 5;	
+	private _stop = _start + 3;	
 	waitUntil { ((_veh aimedAtTarget [_target]) > 0) || (time > _stop)};
 
 	if (time > _stop) then {
@@ -53,7 +53,7 @@ while {alive _veh} do {
 
 	switch (_gun) do {
 		case "gatling_20mm_VTOL_01": {
-			for "_i" from 1 to 100 do {
+			for "_i" from 1 to 50 do {
 				_veh fireAtTarget [_target, _gun];
 				sleep 0.01;
 			};
@@ -69,7 +69,7 @@ while {alive _veh} do {
 		};
 	};
 
-	sleep (random[5, 7, 10]);
+	sleep (random[2.5, 3.5, 5]);
 };
 
 // [[B Alpha 1-1:1,"driver",-1,[],false,B Alpha 1-1:1,"$STR_POSITION_DRIVER"],[B Alpha 1-1:2,"turret",-1,[0],false,B Alpha 1-1:2,"$STR_A3_COPILOT"],[B Alpha 1-1:3,"gunner",-1,[1],false,B Alpha 1-1:3,"$STR_A3_LEFT_GUNNER"],[B Alpha 1-1:4,"turret",-1,[2],false,B Alpha 1-1:4,"$STR_A3_RIGHT_GUNNER"]]
