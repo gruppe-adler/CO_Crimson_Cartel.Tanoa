@@ -1,5 +1,7 @@
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
+[] spawn GRAD_CC_fnc_factoryHandleSec;
+
 // get in car
 private _wp = [grad_cc_tekoriHapuru, grad_cc_hapuruConvoy_car_1, -1, "GETIN", "SAFE"] call CBA_fnc_addWaypoint;
 _wp waypointAttachVehicle grad_cc_hapuruConvoy_car_1;
