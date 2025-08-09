@@ -4,4 +4,9 @@ class hapuru {
     class georgetown {};
     class factory {};
     class factoryHandleSec {};
+    class factoryHandleSecRetreat {};
+    class vagalalaHandleSec {};
+    class templeHandleSec {};
+    class vagalala {};
+    class temple {};
 };

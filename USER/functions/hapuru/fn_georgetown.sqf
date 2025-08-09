@@ -1,6 +1,9 @@
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
+waitUntil { ((date select 3) == 6) && ((date select 4) >= 12) };
+
 grad_cc_hapuruHeli engineOn true;
+sleep 15;
 [grad_cc_hapuruHeli] call grad_cc_fnc_mansionToGeorgetown;
 
 sleep 5;
@@ -16,12 +19,8 @@ private _wp = _grp addWaypoint [getPosASL grad_cc_hapuru_pos_1, -1];
 _wp setWaypointBehaviour "SAFE";
 _wp setWaypointSpeed "LIMITED";
 
-sleep 12;
-
-sleep 15;
-[] call GRAD_CC_fnc_factory;
-
 waitUntil { isTouchingGround grad_cc_hapuruHeli };
 grad_cc_hapuruHeli engineOn false;
 
-// schedule time
+waitUntil { ((date select 3) == 6) && ((date select 4) >= 20) };
+[] call GRAD_CC_fnc_factory;

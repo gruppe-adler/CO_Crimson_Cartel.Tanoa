@@ -16,7 +16,7 @@ private _handler = [
 
 		private _oldTarget = _commander getVariable ["GRAD_CC_patrolTarget", objNull];
 		deleteVehicle _oldTarget;
-		private _nearestTree = selectRandom (nearestTerrainObjects [_commander, ["BUSH", "SMALL TREE", "TREE", "WALL", "ROAD"], 200, false, true]) ;
+		private _nearestTree = selectRandom (nearestTerrainObjects [_commander, ["BUSH", "SMALL TREE", "TREE", "WALL", "ROAD"], 300, false, true]) ;
 		private _pos = getPos _nearestTree;
 		_pos set [2, 0];
 		private _target = createVehicle ["CBA_B_InvisibleTargetVehicle", _pos, [], 0, "CAN_COLLIDE"];

@@ -2,6 +2,8 @@ if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; 
 
 [] spawn GRAD_CC_fnc_factoryHandleSec;
 
+waitUntil { ((date select 3) == 6) && ((date select 4) >= 25) };
+
 // get in car
 private _wp = [grad_cc_tekoriHapuru, grad_cc_hapuruConvoy_car_1, -1, "GETIN", "SAFE"] call CBA_fnc_addWaypoint;
 _wp waypointAttachVehicle grad_cc_hapuruConvoy_car_1;
@@ -23,7 +25,7 @@ _wp waypointAttachVehicle grad_cc_hapuruKa60;
 
 grad_cc_hapuruKa60 enableSimulation true;
 
-waitUntil { ((vehicle grad_cc_tekoriHapuru) isEqualTo grad_cc_hapuruKa60) || (!alive grad_cc_tekoriHapuru) };
+waitUntil { (count ((units _hapuruGrp) select { (vehicle _x) isEqualTo grad_cc_hapuruKa60 })) == (count (units _hapuruGrp)) || (!alive grad_cc_tekoriHapuru) };
 if (!alive grad_cc_tekoriHapuru) exitWith {};
 
 grad_cc_hapuruKa60 engineOn true;
@@ -32,14 +34,17 @@ sleep 20;
 
 [] call grad_cc_fnc_hapuruFactory;
 
-sleep 10;
+sleep 20;
 
-waitUntil { (isTouchingGround grad_cc_hapuruKa60)};
+waitUntil { (isTouchingGround grad_cc_hapuruKa60) || (!alive grad_cc_tekoriHapuru) };
+if (!alive grad_cc_tekoriHapuru) exitWith {};
 sleep 2;
 
 grad_cc_hapuruKa60 engineOn false;
 _hapuruGrp leaveVehicle grad_cc_hapuruKa60;
 
-_wp = [_hapuruGrp, [8512.49,10236.8,0], -1, "GETOUT", "SAFE"] call CBA_fnc_addWaypoint;
+_wp = [_hapuruGrp, [8494.69,10229.3,0], -1, "GETOUT", "SAFE"] call CBA_fnc_addWaypoint;
 _wp = [_hapuruGrp, [8384.48,10244.5,0], -1, "MOVE", "SAFE"] call CBA_fnc_addWaypoint;
 _wp = [_hapuruGrp, [8382.91,10373.1,0], -1, "MOVE", "SAFE"] call CBA_fnc_addWaypoint;
+
+[] call grad_cc_fnc_vagalala;
