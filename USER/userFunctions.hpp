@@ -10,4 +10,5 @@ class grad_crimsonCartel {
     #include "functions\util\cfgFunctions.hpp"
     #include "functions\captures\cfgFunctions.hpp"
     #include "functions\hapuru\cfgFunctions.hpp"
+    #include "functions\intro\cfgFunctions.hpp"
 };

@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=9873;
+		nextID=9874;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2695;
+		nextID=2775;
 	};
 	class Camera
 	{
-		pos[]={6701.4062,49.420353,13339.468};
-		dir[]={-0.45329326,-0.27220592,0.84884065};
-		up[]={-0.12823908,0.96223283,0.2401416};
-		aside[]={0.88215232,-6.1269384e-07,0.4710848};
+		pos[]={5619.8291,13.647395,-5909.2285};
+		dir[]={-0.032670412,-0.21250144,0.97661453};
+		up[]={-0.0071047768,0.97716069,0.21238263};
+		aside[]={0.99944097,4.6566129e-10,0.033434018};
 	};
 };
 binarizationWanted=0;
@@ -32,8 +32,8 @@ addons[]=
 {
 	"A3_Modules_F_Heli_Misc",
 	"A3_Characters_F",
-	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Curator_Virtual",
+	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Exp_A_Virtual",
 	"Desert",
 	"A3_Boat_F_Exp_Boat_Armed_01",
@@ -286,15 +286,15 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted Modules";
+			className="A3_Data_F_Curator";
+			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item3
 		{
-			className="A3_Data_F_Curator";
-			name="Arma 3 Zeus Update - Main Configuration";
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -5259,7 +5259,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=942;
+		items=943;
 		class Item0
 		{
 			dataType="Layer";
@@ -5334,170 +5334,8 @@ class Mission
 			name="Template: Spielereinheiten";
 			class Entities
 			{
-				items=13;
+				items=11;
 				class Item0
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={656.89935,17.555176,3015.4263};
-					};
-					name="zeusModule_adminLogged";
-					id=20;
-					type="ModuleCurator_F";
-					atlOffset=27.883698;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="#adminLogged";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleInfo";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-				class Item1
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={657.38336,-10.050995,2914.1272};
-						angles[]={0.034652505,0,0.010664274};
-					};
-					name="zeusModule_adminVoted";
-					id=21;
-					type="ModuleCurator_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="#adminVoted";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleInfo";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-				class Item2
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5538,7 +5376,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item1
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5579,7 +5417,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item4
+				class Item2
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5620,7 +5458,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
+				class Item3
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5701,7 +5539,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item6
+				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5782,7 +5620,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item7
+				class Item5
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5863,7 +5701,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item8
+				class Item6
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -5943,7 +5781,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item9
+				class Item7
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -6023,7 +5861,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item10
+				class Item8
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -6103,7 +5941,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item11
+				class Item9
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -6157,7 +5995,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item12
+				class Item10
 				{
 					dataType="Layer";
 					name="Kommentare";
@@ -6263,7 +6101,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=115.46719;
+			atlOffset=115.48747;
 		};
 		class Item2
 		{
@@ -15048,32 +14886,34 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7983.6641,-8.5158758,5156.4268};
-				angles[]={0,0.36803851,0};
+				position[]={7983.6641,-8.5163374,5156.4268};
+				angles[]={0,0.36803758,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="grad_cc_SDV_1";
 			};
 			id=1730;
 			type="B_SDV_01_F";
-			atlOffset=17.931459;
+			atlOffset=17.930998;
 		};
 		class Item185
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7949.709,-7.021039,5100.4341};
-				angles[]={0,0.36803851,0};
+				position[]={7949.709,-7.0210657,5100.4341};
+				angles[]={0,0.36803758,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="grad_cc_SDV_2";
 			};
 			id=1731;
 			type="B_SDV_01_F";
-			atlOffset=21.420027;
+			atlOffset=21.42;
 		};
 		class Item186
 		{
@@ -15086,6 +14926,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				name="grad_cc_SDV_4";
 			};
 			id=1732;
 			type="B_SDV_01_F";
@@ -70201,7 +70042,7 @@ class Mission
 					showWP="NEVER";
 					id=4879;
 					type="Move";
-					atlOffset=0.67342377;
+					atlOffset=1.2222214;
 				};
 				class Item4
 				{
@@ -116364,6 +116205,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="grad_cc_alphaGrp";
 			};
 			id=9548;
 			atlOffset=65.781998;
@@ -116943,6 +116785,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="grad_cc_bravoGrp";
 			};
 			id=9557;
 			atlOffset=1.7166138e-05;
@@ -117506,6 +117349,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="grad_cc_charlieGrp";
 			};
 			id=9562;
 		};
@@ -118083,6 +117927,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="grad_cc_deltaGrp";
 			};
 			id=9567;
 			atlOffset=0.00016403198;
@@ -118180,6 +118025,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				name="grad_cc_SDV_3";
 			};
 			id=9585;
 			type="B_SDV_01_F";
@@ -126573,7 +126419,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4267.459,0.0014388561,18948.564};
-						angles[]={0,2.7418559,-0};
+						angles[]={0,2.7418559,0};
 					};
 					side="West";
 					flags=2;
@@ -126590,7 +126436,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4267.3247,3.3603408,18948.477};
-						angles[]={0,2.7418559,-0};
+						angles[]={0,2.7418559,0};
 					};
 					side="West";
 					class Attributes
@@ -126606,7 +126452,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4267.3247,3.3603408,18948.477};
-						angles[]={0,2.7418559,-0};
+						angles[]={0,2.7418559,0};
 					};
 					side="West";
 					class Attributes
@@ -126622,7 +126468,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4267.3247,3.3603408,18948.477};
-						angles[]={0,2.7418559,-0};
+						angles[]={0,2.7418559,0};
 					};
 					side="West";
 					class Attributes
@@ -126699,7 +126545,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2898.8579,483.84399,19147.604};
-				angles[]={0,2.7418559,-0};
+				angles[]={0,2.7418559,0};
 			};
 			side="West";
 			flags=2;
@@ -126908,7 +126754,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6669.6064,-9.7468891,13427.242};
-				angles[]={0,3.5202401,-0};
+				angles[]={0,3.5202401,0};
 			};
 			side="Empty";
 			flags=5;
@@ -126951,16 +126797,83 @@ class Mission
 			type="EmptyDetectorArea10x10";
 			atlOffset=2.385;
 		};
+		class Item942
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={613.75439,-0.20996094,2814.5298};
+			};
+			id=9873;
+			type="ModuleCurator_F";
+			atlOffset=14.154136;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=8;
+			nextID=6;
 		};
 		class Links
 		{
-			items=8;
+			items=6;
 			class Item0
 			{
 				linkID=0;
@@ -127015,26 +126928,6 @@ class Mission
 			{
 				linkID=5;
 				item0=34;
-				item1=178;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item6
-			{
-				linkID=6;
-				item0=20;
-				item1=178;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item7
-			{
-				linkID=7;
-				item0=21;
 				item1=178;
 				class CustomData
 				{

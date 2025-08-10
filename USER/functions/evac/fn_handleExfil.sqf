@@ -1,6 +1,7 @@
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
 ([[4102.99,19390.8,533.443], 157.097, "B_Heli_Transport_03_F", west] call BIS_fnc_spawnVehicle) params ["_veh", "_crew", "_grp"];
+_veh allowDamage false;
 
 [_veh] call grad_cc_fnc_exfil;
 
