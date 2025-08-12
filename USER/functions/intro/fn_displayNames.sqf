@@ -1,6 +1,6 @@
 params ["_names"];
 
-private _totalTime = 154;
+private _totalTime = 156;
 private _timePerName = _totalTime / (count _names);
 
 0 fadeMusic 0;
@@ -17,6 +17,6 @@ sleep 4;
 	sleep _timePerName;
 } forEach _names;
 
-sleep 3;
+sleep 3.7;
 
-["Foo", -1, -1, 8, 1] spawn BIS_fnc_dynamicText;
+["<t color='#880808' font='EtelkaMonospacePro' size='3.5'>Crimson<br />Cartel</t>", -1, 0.2, 10, 3] spawn grad_cc_fnc_customDynamicText;

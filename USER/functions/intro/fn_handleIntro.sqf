@@ -9,7 +9,7 @@ private _toExecute = [0, -2] select isDedicated;
 
 sleep 6;
 
-["normal", ["<t size='5'>Ca. 4 Stunden später</t><br/>", "BLACK FADED", 10, true, true]] remoteExec ["cutText", _toExecute];
+["normal", ["<t size='5'>Ca. 5 Stunden später</t>", "BLACK FADED", 10, true, true]] remoteExec ["cutText", _toExecute];
 
 private _pairs = [
   [grad_cc_alphaGrp,   grad_cc_SDV_1],
@@ -73,10 +73,12 @@ private _spillOver = [];
   };
 
   _veh animateSource ["Doors", 0, false];
-
+  [_veh, true] remoteExec ["setPilotLight", _veh];
 } forEach _pairs;
 
-sleep 3;
+setDate [2035, 2, 9, 5, 35];
+
+sleep 4;
 
 [
 	[],
@@ -89,7 +91,7 @@ sleep 3;
 	}
 ] remoteExec ["spawn", _toExecute];
 
-sleep 6;
+waitUntil { missionNamespace getVariable ["grad_cc_playIntroMusic", false] };
 
 private _units = [switchableUnits select { side _x isEqualTo west}, playableUnits select { (side _x isEqualTo west) && (isNull (getAssignedCuratorLogic _x)) }] select isDedicated;
 private _names = _units apply { name _x };

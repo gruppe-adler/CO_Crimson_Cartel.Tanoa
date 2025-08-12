@@ -6,4 +6,5 @@ class util {
     class initLoadoutTypes {
         postInit = 1;
     };
+    class convertToElite {};
 };

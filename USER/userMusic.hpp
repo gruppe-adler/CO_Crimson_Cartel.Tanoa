@@ -5,5 +5,5 @@
 
 class pursuitOfLiberty {
     name	= "Pursuit of Liberty";
-    sound[]	= { "USER\music\Pursuit_of_Liberty.ogg", db + 0, 1.0 };
+    sound[]	= { "USER\music\Pursuit_of_Liberty.ogg", db + 10, 1.0 };
 };

@@ -11,4 +11,5 @@ class grad_crimsonCartel {
     #include "functions\captures\cfgFunctions.hpp"
     #include "functions\hapuru\cfgFunctions.hpp"
     #include "functions\intro\cfgFunctions.hpp"
+    #include "functions\zeusModules\cfgFunctions.hpp"
 };
