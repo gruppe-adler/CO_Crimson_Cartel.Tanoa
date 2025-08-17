@@ -1,3 +1,9 @@
+["Crimson Cartel", "0 - Toggle Captive",
+{
+	params ["_posASL", "_objectAttached"];
+	[_objectAttached] call GRAD_CC_fnc_toggleCaptive;
+}] call zen_custom_modules_fnc_register;
+
 ["Crimson Cartel", "1 - Start Intro",
 {
 	params ["_posASL", "_objectAttached"];

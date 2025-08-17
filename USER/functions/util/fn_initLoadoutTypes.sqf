@@ -2,7 +2,7 @@ if (not hasInterface) exitWith {};
 
 private ["_diveLoadout", "_normalLoadout"];
 
-_diveLoadout = [["arifle_SDAR_F","","","",["20Rnd_556x45_UW_mag",20],[],""],[],[],["U_B_Wetsuit",[["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_tourniquet",4],["ACE_salineIV_500",2],["ACE_Flashlight_KSF1",1],["ACE_MapTools",1],["20Rnd_556x45_UW_mag",3,20],["SmokeShell",2,1],["HandGrenade",1,1]]],["V_RebreatherB",[]],[],"","G_B_Diving",["ACE_Vector","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch",""]];
+_diveLoadout = [["arifle_SDAR_F","","","",["20Rnd_556x45_UW_mag",20],[],""],[],[],["U_B_Wetsuit",[["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_tourniquet",4],["ACE_salineIV_500",2],["ACE_Flashlight_KSF1",1],["ACE_MapTools",1],["20Rnd_556x45_UW_mag",3,20],["SmokeShell",2,1],["HandGrenade",1,1]]],["V_RebreatherB",[]],[],"","G_B_Diving",["ACE_Vector","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch","ACE_NVG_Wide_Black_WP"]];
 
 switch (typeOf player) do {
 	// PTL, SQL and FTL
@@ -15,7 +15,7 @@ switch (typeOf player) do {
 	};
 
 	case "B_soldier_UAV_F": {
-		_diveLoadout = [["arifle_SDAR_F","","","",["20Rnd_556x45_UW_mag",20],[],""],[],[],["U_B_Wetsuit",[["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_tourniquet",4],["ACE_salineIV_500",2],["ACE_Flashlight_KSF1",1],["ACE_MapTools",1],["20Rnd_556x45_UW_mag",3,20],["SmokeShell",2,1],["HandGrenade",1,1]]],["V_RebreatherB",[]],[],"","G_B_Diving",["ACE_Vector","","","",[],[],""],["ItemMap","B_UavTerminal","TFAR_anprc152","ItemCompass","ItemWatch",""]];
+		_diveLoadout = [["arifle_SDAR_F","","","",["20Rnd_556x45_UW_mag",20],[],""],[],[],["U_B_Wetsuit",[["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_tourniquet",4],["ACE_salineIV_500",2],["ACE_Flashlight_KSF1",1],["ACE_MapTools",1],["20Rnd_556x45_UW_mag",3,20],["SmokeShell",2,1],["HandGrenade",1,1]]],["V_RebreatherB",[]],[],"","G_B_Diving",["ACE_Vector","","","",[],[],""],["ItemMap","B_UavTerminal","TFAR_anprc152","ItemCompass","ItemWatch","ACE_NVG_Wide_Black_WP"]];
 		_normalLoadout = [["arifle_SPAR_02_blk_F","muzzle_snds_M","","optic_ERCO_blk_F",["ACE_30Rnd_556x45_Stanag_Mk318_mag",30],[],"bipod_01_F_blk"],[],["hgun_P07_blk_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CTRG_Soldier_F",[["ACE_CableTie",2],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_salineIV_500",2],["ACE_tourniquet",4]]],["V_PlateCarrier1_rgr_noflag_F",[["ACE_30Rnd_556x45_Stanag_Mk318_mag",14,30],["SmokeShell",2,1],["HandGrenade",1,1],["16Rnd_9x21_Mag",1,17]]],[],"H_HelmetB_TI_tna_F","G_Balaclava_TI_tna_F",["ACE_Vector","","","",[],[],""],["ItemMap","B_UavTerminal","TFAR_anprc152","ItemCompass","ItemWatch",""]];
 	};
 

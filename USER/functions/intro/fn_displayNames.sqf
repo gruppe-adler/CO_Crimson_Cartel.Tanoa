@@ -17,6 +17,6 @@ sleep 4;
 	sleep _timePerName;
 } forEach _names;
 
-sleep 3.7;
+sleep 3.6;
 
 ["<t color='#880808' font='EtelkaMonospacePro' size='3.5'>Crimson<br />Cartel</t>", -1, 0.2, 10, 3] spawn grad_cc_fnc_customDynamicText;

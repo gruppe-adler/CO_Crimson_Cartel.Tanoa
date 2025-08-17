@@ -26,7 +26,7 @@ private _onAction = {
 			params ["_clothSound"];
 			stopSound _clothSound;
 		},
-		"Fescher neuer look..."
+		"Fescher neuer Look..."
 	] call ace_common_fnc_progressBar;
 };
 

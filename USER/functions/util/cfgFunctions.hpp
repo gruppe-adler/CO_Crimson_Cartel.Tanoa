@@ -7,4 +7,5 @@ class util {
         postInit = 1;
     };
     class convertToElite {};
+    class toggleCaptive {};
 };
