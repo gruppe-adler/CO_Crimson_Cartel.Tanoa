@@ -8,7 +8,7 @@ waitUntil { ((date select 3) == 6) && ((date select 4) >= 25) };
 private _wp = [grad_cc_tekoriHapuru, grad_cc_hapuruConvoy_car_1, -1, "GETIN", "SAFE"] call CBA_fnc_addWaypoint;
 _wp waypointAttachVehicle grad_cc_hapuruConvoy_car_1;
 
-grad_cc_hapuruConvoy_car_1 enableSimulation true;
+grad_cc_hapuruConvoy_car_1 enableSimulationGlobal true;
 
 waitUntil { ((vehicle grad_cc_tekoriHapuru) isEqualTo grad_cc_hapuruConvoy_car_1) || (!alive grad_cc_tekoriHapuru) };
 if (!alive grad_cc_tekoriHapuru) exitWith {};
@@ -23,7 +23,7 @@ if (!alive grad_cc_tekoriHapuru) exitWith {};
 _wp = [_hapuruGrp, grad_cc_hapuruKa60, -1, "GETIN", "SAFE", "YELLOW"] call CBA_fnc_addWaypoint;
 _wp waypointAttachVehicle grad_cc_hapuruKa60;
 
-grad_cc_hapuruKa60 enableSimulation true;
+grad_cc_hapuruKa60 enableSimulationGlobal true;
 
 waitUntil { (count ((units _hapuruGrp) select { (vehicle _x) isEqualTo grad_cc_hapuruKa60 })) == (count (units _hapuruGrp)) || (!alive grad_cc_tekoriHapuru) };
 if (!alive grad_cc_tekoriHapuru) exitWith {};

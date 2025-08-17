@@ -25,5 +25,5 @@ private _captureData = [[0,[7047.76,7449.7,2.66],[0.979868,0.199595,0.00450239],
 
 
 
-_heli enableSimulation true;
+_heli enableSimulationGlobal true;
 [_heli, _captureData] spawn BIS_fnc_unitPlay;

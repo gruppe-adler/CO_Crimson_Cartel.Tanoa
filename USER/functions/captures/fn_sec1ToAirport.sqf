@@ -25,7 +25,7 @@ private _captureData = [[0,[8612.73,10218.3,19.2989],[0.566016,0.824389,0.002969
 
 
 
-_heli enableSimulation true;
+_heli enableSimulationGlobal true;
 [_heli, _captureData] spawn BIS_fnc_unitPlay;
 
 sleep 10;
@@ -34,4 +34,4 @@ waitUntil { isTouchingGround _heli };
 
 _heli engineOn false;
 sleep 30;
-_heli enableSimulation false;
+_heli enableSimulationGlobal false;

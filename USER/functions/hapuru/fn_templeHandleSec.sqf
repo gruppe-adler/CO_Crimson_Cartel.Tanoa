@@ -1,7 +1,7 @@
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
 {
-	_x enableSimulation true;
+	_x enableSimulationGlobal true;
 	_x engineOn true;	
 } forEach [grad_cc_sec5LSV, grad_cc_sec6LSV, grad_cc_sec7LSV];
 

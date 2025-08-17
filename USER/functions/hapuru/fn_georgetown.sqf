@@ -19,8 +19,13 @@ private _wp = _grp addWaypoint [getPosASL grad_cc_hapuru_pos_1, -1];
 _wp setWaypointBehaviour "SAFE";
 _wp setWaypointSpeed "LIMITED";
 
+sleep 20;
+
 waitUntil { isTouchingGround grad_cc_hapuruHeli };
 grad_cc_hapuruHeli engineOn false;
+
+sleep 30;
+grad_cc_hapuruHeli enableSimulationGlobal false;
 
 waitUntil { ((date select 3) == 6) && ((date select 4) >= 20) };
 [] call GRAD_CC_fnc_factory;
