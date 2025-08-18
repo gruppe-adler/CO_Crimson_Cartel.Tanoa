@@ -19,7 +19,7 @@ private _wp = _grp addWaypoint [getPosASL grad_cc_hapuru_pos_1, -1];
 _wp setWaypointBehaviour "SAFE";
 _wp setWaypointSpeed "LIMITED";
 
-sleep 20;
+sleep 30;
 
 waitUntil { isTouchingGround grad_cc_hapuruHeli };
 grad_cc_hapuruHeli engineOn false;

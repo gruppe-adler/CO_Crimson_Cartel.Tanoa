@@ -62,3 +62,44 @@
 	params ["_posASL", "_objectAttached"];
 	missionNamespace setVariable ["grad_cc_takeOff", true, true];
 }] call zen_custom_modules_fnc_register;
+
+["Crimson Cartel", "10 - Play Medusa",
+{
+	params ["_posASL", "_objectAttached"];
+	if (isNull _objectAttached) exitWith {};
+	[_objectAttached, ["medusa", 400]] remoteExec ["say3D", [0, -2] select isDedicated];
+}] call zen_custom_modules_fnc_register;
+
+["Crimson Cartel", "11 - Play FrontRowHustle",
+{
+	params ["_posASL", "_objectAttached"];
+	if (isNull _objectAttached) exitWith {};
+	[_objectAttached, ["frontRowHustle", 400]] remoteExec ["say3D", [0, -2] select isDedicated];
+}] call zen_custom_modules_fnc_register;
+
+["Crimson Cartel", "12 - Play Avalanche",
+{
+	params ["_posASL", "_objectAttached"];
+	if (isNull _objectAttached) exitWith {};
+	[_objectAttached, ["avalanche", 400]] remoteExec ["say3D", [0, -2] select isDedicated];
+}] call zen_custom_modules_fnc_register;
+
+["Crimson Cartel", "13 - Toggle Loadout",
+{
+	params ["_posASL", "_objectAttached"];
+	if (not isPlayer _objectAttached) exitWith {};
+	private _currentLoadout = getUnitLoadout player;
+	private _currentLoadoutType = player getVariable ["grad_cc_currentLoadoutType", "DIVE"];
+
+	if (_currentLoadoutType isEqualTo "NORMAL") then {
+		player setVariable ["grad_cc_normalLoadout", _currentLoadout, true];
+		private _diveLoadout = player getVariable ["grad_cc_diveLoadout", []];
+		player setUnitLoadout [_diveLoadout, false];
+		player setVariable ["grad_cc_currentLoadoutType", "DIVE", true];
+	} else {
+		player setVariable ["grad_cc_diveLoadout", _currentLoadout, true];
+		private _normalLoadout = player getVariable ["grad_cc_normalLoadout", []];
+		player setUnitLoadout [_normalLoadout, false];
+		player setVariable ["grad_cc_currentLoadoutType", "NORMAL", true];
+	};
+}] call zen_custom_modules_fnc_register;

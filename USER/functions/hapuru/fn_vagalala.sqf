@@ -27,6 +27,7 @@ if (!alive grad_cc_tekoriHapuru) exitWith {};
 grad_cc_hapuruKa60 engineOn false;
 sleep 5;
 _hapuruGrp leaveVehicle grad_cc_hapuruKa60;
+moveOut grad_cc_tekoriHapuru;
 
 _wp = [_hapuruGrp, [11098.9,9798.23,0], -1, "GETOUT", "SAFE"] call CBA_fnc_addWaypoint;
 _wp = [_hapuruGrp, [11055.5,9868.47,0], -1, "MOVE", "SAFE"] call CBA_fnc_addWaypoint;

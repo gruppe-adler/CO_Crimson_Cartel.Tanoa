@@ -24,6 +24,10 @@ sleep 180;
 
 ([[4102.99,19390.8,533.443], 157.097, "B_Heli_Transport_03_F", west] call BIS_fnc_spawnVehicle) params ["_veh", "_crew", "_grp"];
 _veh allowDamage false;
+{
+	_x disableAI "AUTOTARGET";
+	_x disableAI "AUTOCOMBAT";
+} forEach _crew;
 
 [_veh] call grad_cc_fnc_exfil;
 
